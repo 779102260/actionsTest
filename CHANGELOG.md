@@ -1,5 +1,13 @@
 # Changelog
 
+### [1.1.1](https://www.github.com/779102260/actionsTest/compare/v1.1.0...v1.1.1) (2021-01-26)
+
+
+### Bug Fixes
+
+* patch test ([971e7ee](https://www.github.com/779102260/actionsTest/commit/971e7ee4ceb721782ef919e33e4301890fe908b7))
+* patch test2 ([f61258d](https://www.github.com/779102260/actionsTest/commit/f61258d414a9504e0b1afa0da22fe0e358c2b466))
+
 ## [1.1.0](https://www.github.com/779102260/actionsTest/compare/v1.0.0...v1.1.0) (2021-01-26)
 
 
