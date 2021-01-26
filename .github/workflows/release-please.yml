@@ -13,7 +13,6 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           release-type: node
           package-name: ${{env.ACTION_NAME}}
-          command: github-release
       - uses: actions/checkout@v2
       - name: tag major and patch versions
         if: ${{ steps.release.outputs.release_created }}
