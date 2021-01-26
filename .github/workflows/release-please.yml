@@ -5,7 +5,7 @@ on:
 name: release-please
 jobs:
   # 自动生成changelog 和 提交release pr
-  release-please:
+  changlelog-pr:
      runs-on: ubuntu-latest
      steps:
        - uses: GoogleCloudPlatform/release-please-action@v2
@@ -14,7 +14,7 @@ jobs:
            release-type: node
            package-name: release-please-action
   # 合入pr时自动打tag
-  release-please:
+  tag:
     runs-on: ubuntu-latest
     steps:
       - uses: GoogleCloudPlatform/release-please-action@v2
