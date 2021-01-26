@@ -7,17 +7,17 @@ jobs:
   release-please:
     runs-on: ubuntu-latest
     steps:
-      # 生成changle log 和 提交/更新release pr
       - uses: GoogleCloudPlatform/release-please-action@v2
+        id: release
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           release-type: node
-          package-name: release-please-action
-      # 自动打tag
+          package-name: ${{env.ACTION_NAME}}
+          command: github-release
       - uses: actions/checkout@v2
       - name: tag major and patch versions
-          if: ${{ steps.release.outputs.release_created }}
-          run: |
+        if: ${{ steps.release.outputs.release_created }}
+        run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
           git remote add gh-token "https://${{ secrets.GITHUB_TOKEN}}@github.com/google-github-actions/release-please-action.git"
